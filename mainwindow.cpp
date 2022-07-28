@@ -381,8 +381,8 @@ void MainWindow::on_actionSave_triggered()
                                                      tr("Save sprite"),
                                                      "/home/alexm",
                                                      tr("JSON Files (*.json)"));
-    if (!fileExists(fileName))
-        return;
+  //  if (!fileExists(fileName))
+    //    return;
 
     animation.saveToJson(fileName);
 }
