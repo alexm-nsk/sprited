@@ -165,6 +165,14 @@ public:
         update();
     }
 
+    void wheelEvent(QWheelEvent *ev) override
+    {
+        scaleX += ev->angleDelta().y()/100.0;
+        scaleY += ev->angleDelta().y()/100.0;
+        if (scaleX < 1) scaleX = 1;
+        if (scaleY < 1) scaleY = 1;
+        repaint();
+    }
 };
 
 #endif // OPENGLWIDGET_H
