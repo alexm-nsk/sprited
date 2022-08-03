@@ -86,7 +86,10 @@ public:
     }
 
     void setCurrentFrame(size_t frame){
-        currentFrameIndex = frame;
+        if(currentFrameIndex < getLength())
+            currentFrameIndex = frame;
+        else
+            currentFrameIndex = getLength() - 1;
     }
 
     void setLeft(const int &newValue){

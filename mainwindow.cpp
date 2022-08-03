@@ -422,6 +422,13 @@ void MainWindow::on_stopButton_clicked(){
 
 void MainWindow::on_pushButton_7_clicked()
 {
+    if(animation.removeFrame())
+    {
+        ui->seekBar->setMaximum(ui->seekBar->maximum() - 1);
+        size_t newFrameIndex = ui->seekBar->value();
+        animation.setCurrentFrame(newFrameIndex);
+        getFrame(newFrameIndex);
+    }
 
 }
 

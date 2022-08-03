@@ -75,6 +75,16 @@ public:
             return -1;
     }
 
+    bool removeFrame()
+    {
+        //if sequence isn't empty:
+        if (getNumSequences() && getSequenceLength()){
+            sequences[currentSequenceIndex].removeFrame(currentFrame);
+            return true;
+        }
+        return false;
+    }
+
     size_t addSequence(QString name = ""){
         Sequence newSequence(name);
         sequences.push_back(newSequence);
