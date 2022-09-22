@@ -236,6 +236,7 @@ void MainWindow::on_addFrameButton_clicked(){
             ui->seekBar->setValue(max);
         }
 
+
     }
 }
 

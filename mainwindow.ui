@@ -729,7 +729,7 @@
    </widget>
    <widget class="QMenu" name="menuSprite">
     <property name="title">
-     <string>Sprite</string>
+     <string>Spritesheet</string>
     </property>
     <addaction name="actionLoad_Image"/>
    </widget>
